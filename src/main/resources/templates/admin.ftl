@@ -7,7 +7,7 @@
 <body>
 Admin access
 
-<form action="" method="POST">
+<form action="/logout" method="POST">
         <input type="submit" value="Logout"/>
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>		
       </form> 

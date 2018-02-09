@@ -10,6 +10,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
+	
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth)
 	throws Exception {
@@ -19,12 +21,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	/*.withUser("user").password("password").roles("USER").and()*/
 	}
 	
-	@Override
+	/*@Override
 	protected void configure(HttpSecurity http) throws Exception {
-	/*http
-	.authorizeRequests()
-	.antMatchers("/admin").hasAuthority("ROLE_ADMIN")
-	.anyRequest().permitAll();*/
 		
 		http
 		.authorizeRequests()
@@ -35,8 +33,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.loginPage("/login")
 		.usernameParameter("username")
 		.passwordParameter("password")
-		/*.loginProcessingUrl("/loginprocess")*/
+		.loginProcessingUrl("/loginprocess")
 		.defaultSuccessUrl("/admin")
 		.failureUrl("/login?error=true");
-	}
+	}*/
 }
